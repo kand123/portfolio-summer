@@ -1,0 +1,30 @@
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+
+#header {background-image: url('../../images/code2.png');}
+
+
+
+body.homepage {
+    #header {
+        height: 100vh;
+        min-height: 40em;
+
+        h1 {
+            font-size: 4em;
+        }
+
+        &:after {
+            content: '';
+            background: rgb(136, 135, 135);
+            @include vendor('transition', 'opacity 2.5s ease-in-out');
+            @include vendor('transition-delay', '0.5s');
+        }
+    }
+}
