@@ -1,5 +1,23 @@
 body {background-color: #eee;}
 
+.button {background-color: #d13726;}
+#main .button {
+
+&:hover {background-color: #ef8376; color: white;}
+
+}
+
+// a {
+//     color: #ef8376;
+//     :hover {
+        
+//         color: #d32b18;
+//         border-bottom-color: transparent;
+//     }
+// }
+
+
+
 #header h1 {
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Josefin Sans', sans-serif;
@@ -11,13 +29,18 @@ body {background-color: #eee;}
 
 #header a {
     font-family: 'Josefin Sans', sans-serif;
-   
+    
+ 
+}
+.circle-button {font-size: .9rem; } 
+
+#header {background-image: url('../../images/code2.png');
+    .button {line-height: 1.8rem; padding-top: .8rem ;}
 }
 
+#main {padding-top: 6%;
 
-#header {background-image: url('../../images/code2.png');}
-
-#main {padding-top: 6%;}
+}
 
 #main p {line-height: 1.9rem;}
 #main img {width: 30%; margin-left: 3%; border-radius: 6%;}
@@ -93,7 +116,7 @@ body.homepage {
 
         &:hover {
             &:before {
-                background-color: rgba(239, 131, 118, 0.75);
+                background-color: rgba(211, 43, 24, 0.75);
             }
         }
     }

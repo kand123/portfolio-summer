@@ -1939,6 +1939,13 @@ body.homepage.is-preload #header:after {
 body {
   background-color: #eee; }
 
+.button {
+  background-color: #d13726; }
+
+#main .button:hover {
+  background-color: #ef8376;
+  color: white; }
+
 #header h1 {
   font-family: 'Ubuntu', sans-serif;
   font-family: 'Josefin Sans', sans-serif; }
@@ -1949,8 +1956,14 @@ body {
 #header a {
   font-family: 'Josefin Sans', sans-serif; }
 
+.circle-button {
+  font-size: .9rem; }
+
 #header {
   background-image: url("../../images/code2.png"); }
+  #header .button {
+    line-height: 1.8rem;
+    padding-top: 0.8rem; }
 
 #main {
   padding-top: 6%; }
@@ -2033,7 +2046,7 @@ body.homepage #header {
       margin: -1.5em 0 0 0;
       background: url("images/arrow.svg") no-repeat center center; }
     .carousel .forward:hover:before, .carousel .backward:hover:before {
-      background-color: rgba(239, 131, 118, 0.75); }
+      background-color: rgba(211, 43, 24, 0.75); }
   .carousel .forward {
     right: 0; }
     .carousel .forward:before {
