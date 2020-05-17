@@ -1,16 +1,28 @@
+body {background-color: #eee;}
 
-h1 {
+#header h1 {
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Josefin Sans', sans-serif;
 }
 
+#header p {
+    font-family: 'Josefin Sans', sans-serif; 
+}
 
+#header a {
+    font-family: 'Josefin Sans', sans-serif;
+   
+}
 
 
 #header {background-image: url('../../images/code2.png');}
 
+#main {padding-top: 6%;}
 
-
+#main p {line-height: 1.9rem;}
+#main img {width: 30%; margin-left: 3%; border-radius: 6%;}
+#main footer {display: flex; justify-content: center;}
+#main h3 {font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center;}
 body.homepage {
     #header {
         height: 100vh;
@@ -27,4 +39,136 @@ body.homepage {
             @include vendor('transition-delay', '0.5s');
         }
     }
+}
+#banner {
+    background-color: #333;
+    h2{color: white;}
+    strong{color: white;}
+}
+
+
+/* Carousel */
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 5em 0 5em 0;
+    margin-bottom: 0;
+
+    .forward, .backward {
+        position: absolute;
+        top: 50%;
+        width: 6em;
+        height: 12em;
+        margin-top: -6em;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 6em;
+            height: 6em;
+            border-radius: 100%;
+            background-color: rgba(72, 57, 73, 0.5);
+            position: absolute;
+            top: 50%;
+            margin-top: -3em;
+            -moz-transition: background-color 0.35s ease-in-out;
+            -webkit-transition: background-color 0.35s ease-in-out;
+            -o-transition: background-color 0.35s ease-in-out;
+            -ms-transition: background-color 0.35s ease-in-out;
+            transition: background-color 0.35s ease-in-out;
+            // -webkit-backface-visibility: hidden;
+        }
+
+        &:after {
+            content: '';
+            width: 3em;
+            height: 3em;
+            position: absolute;
+            top: 50%;
+            margin: -1.5em 0 0 0;
+            background: url('images/arrow.svg') no-repeat center center;
+        }
+
+        &:hover {
+            &:before {
+                background-color: rgba(239, 131, 118, 0.75);
+            }
+        }
+    }
+
+    .forward {
+        right: 0;
+
+        &:before {
+            right: -3em;
+        }
+
+        &:after {
+            right: -0.25em;
+        }
+    }
+
+    .backward {
+        left: 0;
+
+        &:before {
+            left: -3em;
+        }
+
+        &:after {
+            left: -0.25em;
+            @include vendor('transform', 'scaleX(-1)');
+        }
+    }
+
+    .reel {
+        white-space: nowrap;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 2em 0 2em;
+    }
+
+    article {
+        display: inline-block;
+        width: 23em; 
+        // background: #333;
+        background: rgba(170,170,160,.95);
+       
+        text-align: center;
+        color: #fff;
+        
+        padding: 0em 1em .5em 1em;
+        margin: 0 1.8em 0 0;
+        white-space: normal;
+        opacity: 1.0;
+        h3 {padding-bottom: 0;margin-bottom:0;}
+        @include vendor('transition', 'opacity 0.75s ease-in-out');
+
+        &.loading {
+            opacity: 0;
+        }
+
+        .image {
+            position: relative;
+            left: -1em;
+            top: 0;
+            width: auto;
+            margin-right: -2em;
+            margin-bottom: .5em;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.flexed-info {
+    // display: grid;
+    // grid-template-columns: 2fr 1fr;
+    // column-gap: 4%;
+    display: flex; 
+    justify-content: space-between;
 }
