@@ -188,7 +188,7 @@ body.homepage {
         &:after {
             content: '';
             background: rgb(136, 135, 135);
-            @include vendor('transition', 'opacity 1.5s ease-in-out');
+            @include vendor('transition', 'opacity 1s ease-in-out');
             @include vendor('transition-delay', '0.3s');
         }
     }
