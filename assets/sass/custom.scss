@@ -199,3 +199,66 @@ body.homepage {
 }
 
 
+/* Section/Article */
+
+section, article {
+    margin-bottom: 2em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.row > {
+    section, article {
+        margin-bottom: 3.5em;
+        //I changed this number too
+    }
+}
+
+header {
+    > p {
+        font-size: 1.25em;
+    }
+}
+
+/* Image */
+
+.image {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    &.fit {
+        display: block;
+        width: 100%;
+    }
+
+    &.featured {
+        display: block;
+        width: 100%;
+        margin: 0 0 1.3em 0;
+        //I changed featured margin bottom from 3 or 4 ems to 1
+    }
+
+    &.left {
+        float: left;
+        margin: 0 2em 2em 0;
+    }
+
+    &.centered {
+        display: block;
+        margin: 0 0 2em 0;
+
+        img {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+}

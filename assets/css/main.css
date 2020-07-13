@@ -2101,4 +2101,42 @@ body.homepage #header {
   display: flex;
   justify-content: space-between; }
 
+/* Section/Article */
+section, article {
+  margin-bottom: 2em; }
+  section:last-child, article:last-child {
+    margin-bottom: 0; }
+
+.row > section, .row > article {
+  margin-bottom: 3.5em; }
+
+header > p {
+  font-size: 1.25em; }
+
+/* Image */
+.image {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  outline: 0; }
+  .image img {
+    display: block;
+    width: 100%; }
+  .image.fit {
+    display: block;
+    width: 100%; }
+  .image.featured {
+    display: block;
+    width: 100%;
+    margin: 0 0 1.3em 0; }
+  .image.left {
+    float: left;
+    margin: 0 2em 2em 0; }
+  .image.centered {
+    display: block;
+    margin: 0 0 2em 0; }
+    .image.centered img {
+      margin: 0 auto;
+      width: auto; }
+
 /*# sourceMappingURL=main.css.map */
